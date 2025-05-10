@@ -59,8 +59,11 @@
         <section id="hero">
             <!-- Video de fondo -->
             <div class="video-background">
-                <video autoplay muted loop playsinline>
+                <video autoplay muted loop playsinline poster="assets/img/gym.jpg">
                     <source src="assets/videos/video-gym.mp4" type="video/mp4">
+                    <source src="assets/videos/video-gym.webm" type="video/webm">
+                    <!-- Fallback para dispositivos que no soportan video -->
+                    <img src="assets/img/gym.jpg" alt="Background image">
                 </video>
                 <div class="video-overlay"></div>
             </div>
