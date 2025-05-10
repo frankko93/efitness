@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eFitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.2">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="eFitness Logo">
+                </a>
+            </div>
+            
+            <!-- Botón de menú móvil -->
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Menú de navegación -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#quienes-somos">Quiénes somos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                
+                <!-- Selector de idioma (versión móvil) -->
+                <div class="lang-selector mobile">
+                    <a href="#" id="lang-es-mobile">ES</a>
+                    <a href="#" id="lang-en-mobile">EN</a>
+                </div>
+            </nav>
+            
+            <!-- Selector de idioma (versión desktop) -->
+            <div class="lang-selector desktop">
+                <a href="#" id="lang-es">ES</a>
+                <a href="#" id="lang-en">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <!-- Video de fondo -->
+            <div class="video-background">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/videos/video-gym.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div id="hero-es" class="lang-content">
+                    <h1>Impulsamos tu bienestar</h1>
+                    <p>Soluciones integrales en fitness, nutrición y equipamiento</p>
+                    <a href="#servicios" class="hero-button"><span>Conocé nuestros servicios</span></a>
+                </div>
+                <div id="hero-en" class="lang-content" style="display: none;">
+                    <h1>Boost your wellness</h1>
+                    <p>Comprehensive solutions in fitness, nutrition and equipment</p>
+                    <a href="#servicios" class="hero-button"><span>Discover our services</span></a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="quienes-somos" class="about-section">
+            <div class="container">
+                <div class="about-header section-title">
+                    <div id="about-title-es" class="lang-content">
+                        <h2>Quiénes somos</h2>
+                    </div>
+                    <div id="about-title-en" class="lang-content" style="display: none;">
+                        <h2>Who we are</h2>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div id="content-es" class="lang-content">
+                            <p>En <strong>eFitness</strong>, ofrecemos soluciones integrales para una vida saludable. Desde la adquisición de maquinaria fitness, hasta la venta de suplementos deportivos y planes nutricionales personalizados, acompañamos a cada persona o empresa en su camino al bienestar.</p>
+                            <p>Nuestra visión es integrar estas soluciones en entornos laborales exigentes como la minería, brindando espacios de salud y entrenamiento profesional.</p>
+                            <p>Fundada en 2022 por un equipo de profesionales apasionados por el fitness y la tecnología, eFitness ha crecido rápidamente para convertirse en un referente en soluciones de bienestar integral.</p>
+                        </div>
+                        
+                        <div id="content-en" class="lang-content" style="display: none;">
+                            <p>At <strong>eFitness</strong>, we provide comprehensive solutions for a healthy lifestyle. From fitness equipment acquisition to sports supplements and personalized nutritional plans, we support individuals and companies on their path to wellness.</p>
+                            <p>Our vision is to implement these solutions in demanding work environments such as mining, creating spaces for health and professional training.</p>
+                            <p>Founded in 2022 by a team of professionals passionate about fitness and technology, eFitness has quickly grown to become a reference in comprehensive wellness solutions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-section">
+                        <div class="team-members">
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/img/founder-1.jpg" alt="Fundador 1">
+                                </div>
+                                <div class="member-info">
+                                    <div id="member1-es" class="lang-content">
+                                        <h4>Emiliano Rubia</h4>
+                                        <p>CEO & Especialista en Fitness</p>
+                                    </div>
+                                    <div id="member1-en" class="lang-content" style="display: none;">
+                                        <h4>Emiliano Rubia</h4>
+                                        <p>CEO & Fitness Specialist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/img/founder-1.jpg" alt="Fundador 2">
+                                </div>
+                                <div class="member-info">
+                                    <div id="member2-es" class="lang-content">
+                                        <h4>Juan Ignacio Ponce</h4>
+                                        <p>Director de Nutrición</p>
+                                    </div>
+                                    <div id="member2-en" class="lang-content" style="display: none;">
+                                        <h4>Juan Ignacio Ponce</h4>
+                                        <p>Nutrition Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="member-photo">
+                                    <img src="assets/img/founder-1.jpg" alt="Fundador 3">
+                                </div>
+                                <div class="member-info">
+                                    <div id="member3-es" class="lang-content">
+                                        <h4>Juan Ignacio Ponce</h4>
+                                        <p>Director de Tecnología</p>
+                                    </div>
+                                    <div id="member3-en" class="lang-content" style="display: none;">
+                                        <h4>Juan Ignacio Ponce</h4>
+                                        <p>Technology Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="servicios">
+            <div class="container">
+                <div class="section-title">
+                    <div id="servicios-title-es" class="lang-content">
+                        <h2>Nuestros Servicios</h2>
+                    </div>
+                    <div id="servicios-title-en" class="lang-content" style="display: none;">
+                        <h2>Our Services</h2>
+                    </div>
+                </div>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="assets/img/gym.jpg" alt="Maquinaria fitness">
+                        </div>
+                        <div class="card-content">
+                            <div class="lang-content" id="service-1-es">
+                                <h3>Adquisición de maquinaria</h3>
+                                <p>Soluciones en equipamiento fitness para hogares y gimnasios.</p>
+                            </div>
+                            <div class="lang-content" id="service-1-en" style="display: none;">
+                                <h3>Equipment acquisition</h3>
+                                <p>Fitness equipment solutions for homes and gyms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="assets/img/suplementos.jpg" alt="Suplementos deportivos">
+                        </div>
+                        <div class="card-content">
+                            <div class="lang-content" id="service-2-es">
+                                <h3>Venta de suplementos</h3>
+                                <p>Productos seleccionados para mejorar tu rendimiento y bienestar.</p>
+                            </div>
+                            <div class="lang-content" id="service-2-en" style="display: none;">
+                                <h3>Sports supplements</h3>
+                                <p>Carefully selected products to enhance your performance and health.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="assets/img/nutricion.jpg" alt="Planes nutricionales">
+                        </div>
+                        <div class="card-content">
+                            <div class="lang-content" id="service-3-es">
+                                <h3>Planes nutricionales</h3>
+                                <p>Planes alimenticios diseñados por nutricionistas certificados.</p>
+                            </div>
+                            <div class="lang-content" id="service-3-en" style="display: none;">
+                                <h3>Nutrition plans</h3>
+                                <p>Meal plans crafted by certified nutritionists.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="assets/img/consultor.jpg" alt="Consultoría de gimnasios">
+                        </div>
+                        <div class="card-content">
+                            <div class="lang-content" id="service-4-es">
+                                <h3>Consultoría de gimnasios</h3>
+                                <p>Desde el diseño hasta la implementación de espacios fitness.</p>
+                            </div>
+                            <div class="lang-content" id="service-4-en" style="display: none;">
+                                <h3>Gym consulting</h3>
+                                <p>From design to implementation of fitness spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <div class="container">
+                <div class="section-title">
+                    <div id="contact-title-es" class="lang-content">
+                        <h2>Contacto</h2>
+                    </div>
+                    <div id="contact-title-en" class="lang-content" style="display: none;">
+                        <h2>Contact</h2>
+                    </div>
+                </div>
+                
+                <div class="contact-content">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre / Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje / Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit">Enviar / Send</button>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <div id="contact-alt-es" class="lang-content">
+                            <p>También puedes escribirnos a: <a href="mailto:contacto@efitness.com">contacto@efitness.com</a></p>
+                        </div>
+                        <div id="contact-alt-en" class="lang-content" style="display: none;">
+                            <p>You can also email us at: <a href="mailto:contacto@efitness.com">contacto@efitness.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 eFitness. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <!-- 
+                * Aquí irán los íconos de redes sociales:
+                * - Facebook
+                * - Instagram
+                * - Twitter
+                * - YouTube
+                -->
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html> 
