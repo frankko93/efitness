@@ -173,4 +173,31 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Detectar sección activa al cargar la página
     setActiveSection();
+
+    // Detectar si es dispositivo móvil
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Manejar el video de fondo
+    function handleBackgroundVideo() {
+        const videoBackground = document.querySelector('.video-background');
+        const video = videoBackground.querySelector('video');
+        
+        if (isMobileDevice()) {
+            // En dispositivos móviles, ocultar el video y mostrar la imagen
+            if (video) {
+                video.style.display = 'none';
+            }
+            videoBackground.style.backgroundImage = "url('assets/img/gym-back.jpg')";
+        } else {
+            // En desktop, mostrar el video
+            if (video) {
+                video.style.display = 'block';
+            }
+        }
+    }
+
+    // Ejecutar al cargar la página
+    handleBackgroundVideo();
 }); 
