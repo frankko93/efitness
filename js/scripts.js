@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav a');
     
     if (mobileMenuToggle && mainNav) {
         mobileMenuToggle.addEventListener('click', function() {
@@ -37,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Cerrar menú al hacer clic en enlaces de navegación
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (mainNav.classList.contains('active')) {
@@ -145,4 +145,32 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedLanguage) {
         setLanguage(savedLanguage);
     }
+
+    // Función para detectar la sección activa
+    function setActiveSection() {
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('nav ul li a');
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const offset = 100; // Ajuste para el header fijo
+            
+            if (rect.top <= offset && rect.bottom >= offset) {
+                const currentId = section.getAttribute('id');
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${currentId}` || 
+                        (currentId === 'hero' && item.getAttribute('href') === 'index.html')) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    // Detectar sección activa al hacer scroll
+    window.addEventListener('scroll', setActiveSection);
+    
+    // Detectar sección activa al cargar la página
+    setActiveSection();
 }); 
