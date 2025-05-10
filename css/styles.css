@@ -383,6 +383,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
+  opacity: 0.8;
 }
 
 .video-overlay {
@@ -670,6 +671,14 @@ main {
   .member-photo {
     width: 120px;
     height: 120px;
+  }
+  
+  .video-background video {
+    display: none;
+  }
+  
+  .video-background {
+    background: url('../assets/img/gym.jpg') no-repeat center center/cover;
   }
 }
 

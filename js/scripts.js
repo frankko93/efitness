@@ -173,26 +173,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Detectar sección activa al cargar la página
     setActiveSection();
-
-    // Asegurar reproducción del video en móviles
-    const video = document.querySelector('.video-background video');
-    
-    // Intentar reproducir el video
-    function playVideo() {
-        video.play().catch(function(error) {
-            console.log("Error reproduciendo video:", error);
-            // Si falla, intentar reproducir sin sonido
-            video.muted = true;
-            video.play().catch(function(error) {
-                console.log("Error reproduciendo video sin sonido:", error);
-            });
-        });
-    }
-
-    // Intentar reproducir cuando el usuario interactúa con la página
-    document.addEventListener('touchstart', playVideo, { once: true });
-    document.addEventListener('click', playVideo, { once: true });
-    
-    // Intentar reproducir inmediatamente
-    playVideo();
 }); 
