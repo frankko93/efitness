@@ -1056,6 +1056,15 @@ footer p {
   .map-container {
     order: -1;
   }
+
+  footer .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .social-icons {
+    order: -1; /* Mueve los íconos sociales al principio */
+  }
 }
 
 @media (max-width: 576px) {
